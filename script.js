@@ -25,3 +25,20 @@ pegarTresPersonagens = () => {
         }
     }())
 }
+
+pegarPersonagem = (cont) => {
+    let numeroAleatorio = gerarValorAleatorio();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+        method:'GET',
+        headers: {
+            Accept: 'application/json',
+            "Content-type": 'application/json'
+        }
+    }).then((response) => response.json()).then((data) => {
+        imagem[cont+1].src = data.image;
+        imagem[cont+1].alt = data.name;
+        nomeDoPersonagem[cont+1].innerHTML = data.name;
+        especie[cont+1].innerHTML = data.species;
+        condicao[cont+1].innerHTML = traduzirCondicao(data);
+    });
+}
