@@ -42,3 +42,4 @@ pegarPersonagem = (cont) => {
         condicao[cont+1].innerHTML = traduzirCondicao(data);
     });
 }
+botao.onclick = pegarTresPersonagens;
