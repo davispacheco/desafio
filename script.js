@@ -17,3 +17,11 @@ traduzirCondicao = (data) => {
 gerarValorAleatorio = () => {
     return Math.floor(Math.random() * 671);
 };
+
+pegarTresPersonagens = () => {
+    (async function () {
+        for(var cont=0; cont<3; cont++) {
+            await pegarPersonagem(cont);
+        }
+    }())
+}
