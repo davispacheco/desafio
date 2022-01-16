@@ -6,11 +6,11 @@ const nomeDoPersonagem = {1: document.querySelector('#nome1'), 2: document.query
 
 traduzirCondicao = (data) => {
     if(data.status == 'unknown'){
-        return 'Não sabemos.';
+        return 'Não sabemos';
     }else if(data.status == 'Alive'){
-        return 'Sim.';
+        return 'Sim';
     }else {
-        return 'Não, está morto.';
+        return 'Não, está morto';
     }
 }
 
